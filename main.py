@@ -11,6 +11,20 @@ import plotly.graph_objects as go
 
 glucose_unit_options = ['ml/dL','mmol/L']
 glucose_units = st.sidebar.radio('Glucose Units',glucose_unit_options)
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
+        width: 150px;
+    }
+    [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
+        width: 150px;
+        margin-left: -150px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 st.title("Glucose/Ketone Index Calculator")
 
 col1, col2 = st.columns(2)
