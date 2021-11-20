@@ -56,13 +56,13 @@ with col2:
         mode = "gauge+number+delta",
         value = gki,
         domain = {'x': [0, 1], 'y': [0, 1]},
-        title = {'text': "GKI", 'font': {'size': 20}},
+        title = {'text': "GKI", 'font': {'size': 25}},
         delta = {'reference': 9, 'increasing': {'color': "white"}},
         gauge = {
             'axis': {'tick0':1,'range': [0, 9], 'tickwidth': 1, 'tickcolor': "black"},
             'bar': {'color': "red"},
             'bgcolor': "white",
-            'borderwidth': 1,
+            'borderwidth': 2,
             'bordercolor': "black",
             'steps': [
                 {'range': [0, 1], 'color': 'white'},
