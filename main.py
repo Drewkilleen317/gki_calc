@@ -49,12 +49,7 @@ with col1:
     else:
         gki = round(glucose_reading  / ketone_reading,1)
     
-    st.write("Your GKI is: {:.1f}".format(gki))
-# =============================================================================
-#     color_picked = st.color_picker('Pick')
-#     st.write('You picked: ',color_picked)
-# =============================================================================
-   
+    st.write("Your GKI is: {:.1f}".format(gki))   
 
 with col2:
     fig = go.Figure(go.Indicator(
