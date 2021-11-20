@@ -7,18 +7,16 @@ Created on Fri Nov  5 19:56:06 2021
 """
 
 import streamlit as st
-#import datetime
 import plotly.graph_objects as go
 
 glucose_unit_options = ['ml/dL','mmol/L']
 glucose_units = st.sidebar.radio('Glucose Units',glucose_unit_options)
-st.title("GKI Calculator")
-#st.markdown('Use this Streamlit app to calculate your Glucose/Ketone Index ')
+st.title("Glucose/Ketone Index Calculator")
 
 col1, col2 = st.columns(2)
 
 with col1:
-#    glucose_units = st.radio("Glucose Units:",('ml/dL','mmol/L'))
+
     glucose_reading = st.number_input(label= "Glucose Reading", value = 95, format="%i")
     ketone_reading = st.number_input(label= "Ketone Reading", value = 1.0, step=(0.1),format="%.1f")
     
