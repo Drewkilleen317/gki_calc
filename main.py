@@ -8,6 +8,10 @@ Created on Fri Nov  5 19:56:06 2021
 
 import streamlit as st
 import plotly.graph_objects as go
+import bisect
+
+grades = ["Doctor's Supervision","Super","Moderate","Low","Not in Ketosis"]
+breakpoints = [0,1,3,6,9]
 
 st.set_page_config(page_title="Glucose/Ketone Index Calculator",
                    page_icon="🦈", layout="centered",
@@ -48,9 +52,14 @@ with col1:
         gki = round(glucose_reading / 18 / ketone_reading,1)
     else:
         gki = round(glucose_reading  / ketone_reading,1)
+        
+    grade = grades[bisect.bisect(breakpoints,gki)-1]
     
     st.write("Your GKI is: {:.1f}".format(gki))   
-
+    st.write("Your Ketosis level is:  ", grade)
+    
+    
+    
 with col2:
     fig = go.Figure(go.Indicator(
         mode = "gauge+number+delta",
