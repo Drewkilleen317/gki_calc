@@ -10,7 +10,7 @@ import streamlit as st
 import plotly.graph_objects as go
 import bisect
 
-grades = ["Doctor's Supervision","Super","Moderate","Low","Not in Ketosis"]
+grades = ["Doctor's Supervision Only!","Super","Moderate","Low","Not in Ketosis"]
 breakpoints = [0,1,3,6,9]
 
 st.set_page_config(page_title="Glucose/Ketone Index Calculator",
