@@ -9,13 +9,17 @@ Created on Fri Nov  5 19:56:06 2021
 import streamlit as st
 import plotly.graph_objects as go
 import bisect
+from PIL import Image
 
+my_page_icon = Image.open("python_zen.png")
 grades = ["Doctor's Supervision Only!","Super","Moderate","Low","Not in Ketosis"]
 breakpoints = [0,1,3,6,9]
 
 st.set_page_config(page_title="Glucose/Ketone Index Calculator",
-                   page_icon="🦈", layout="centered",
-                   initial_sidebar_state="collapsed", menu_items=None)
+                   page_icon=my_page_icon,
+                   layout="centered",
+                   initial_sidebar_state="collapsed",
+                   menu_items=None)
 
 glucose_unit_options = ['ml/dL','mmol/L']
 glucose_units = st.sidebar.radio('Glucose Units',glucose_unit_options)
