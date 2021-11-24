@@ -23,6 +23,7 @@ st.set_page_config(page_title="Glucose/Ketone Index Calculator",
 
 glucose_unit_options = ['ml/dL','mmol/L']
 glucose_units = st.sidebar.radio('Glucose Units',glucose_unit_options)
+st.sidebar.write("Version 1.1")
 
 #
 # Set width of sidebar to 150 pixels
