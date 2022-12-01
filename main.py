@@ -25,23 +25,6 @@ glucose_unit_options = ['ml/dL','mmol/L']
 glucose_units = st.sidebar.radio('Glucose Units',glucose_unit_options)
 st.sidebar.write("Version 1.1")
 
-#
-# Set width of sidebar to 150 pixels
-#__________________________________________________________________________
-st.markdown(
-    """
-    <style>
-    [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-        width: 150px;
-    }
-    [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-        width: 150px;
-        margin-left: -150px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,)
-
 st.title("Glucose/Ketone Index Calculator")
 
 col1, col2 = st.columns(2)
@@ -62,8 +45,6 @@ with col1:
     
     st.write("Your GKI is: {:.1f}".format(gki))   
     st.write("Your Ketosis level is:  ", grade)
-    
-    
     
 with col2:
     fig = go.Figure(go.Indicator(
