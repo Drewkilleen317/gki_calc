@@ -25,7 +25,7 @@ glucose_unit_options = ['ml/dL','mmol/L']
 glucose_units = st.sidebar.radio('Glucose Units',glucose_unit_options)
 st.sidebar.write("Version 1.1")
 
-st.title("Glucose/Ketone Index Calculator")
+st.title("Glucose/Ketone Index Calculator II")
 
 col1, col2 = st.columns(2)
 
