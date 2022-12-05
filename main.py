@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 from bisect import bisect
 from PIL import Image
 
-my_page_icon = Image.open("python_zen.png")
+my_page_icon = Image.open("data/python_zen.png")
 grades = ["Doctor's Supervision Only!","Super","Moderate","Low","Not in Ketosis"]
 grade_breakpoints = [0,1,3,6,9]
 
